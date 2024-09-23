@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Risk Detection Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        p {
+            color: #7f8c8d;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            margin: 20px 0;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            font-size: 1.5em;
+            color: #3498db;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 1em;
+            color: #34495e;
+            margin-bottom: 20px;
+        }
+
+        .card button {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+        }
+
+        .card button:hover {
+            background-color: #2980b9;
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .card {
+            flex: 1 1 calc(45% - 20px);
+            margin: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Health Risk Detection Portal</h1>
+        <p>Select a test below to analyze your health risks using blood report data for various conditions.</p>
+
+        <div class="grid">
+            <!-- CBC Test Card -->
+            <div class="card">
+                <h2>CBC Test</h2>
+                <p>Analyze your Complete Blood Count (CBC) report to detect potential cancer risks and other conditions.</p>
+                <button onclick="/storage/emulated/0/Android/data/com.teejay.trebedit/files/TrebEdit user files/cbc_and_thyroidism.html">Start CBC Test</button>
+                
+            </div>
+
+            <!-- Thyroidism Test Card -->
+            <div class="card">
+                <h2>Thyroidism Test</h2>
+                <p>Evaluate your Thyroid Function Test (TFT) values to check for thyroid-related disorders.</p>
+                <button onclick="window.location.href='cbc_and_thyroidism.html#tftSection'">Start Thyroidism Test</button>
+            </div>
+
+            <!-- Diabetes Risk Test Card -->
+            <div class="card">
+                <h2>Diabetes Risk Test</h2>
+                <p>Check your blood glucose levels to assess the risk of diabetes and related conditions.</p>
+                <button onclick="window.location.href='cbc_and_thyroidism.html#diabetesSection'">Start Diabetes Test</button>
+            </div>
+
+            <!-- Cholesterol Test Card -->
+            <div class="card">
+                <h2>Cholesterol Test</h2>
+                <p>Analyze your cholesterol levels (LDL, HDL, and triglycerides) to assess heart disease risk.</p>
+                <button onclick="window.location.href='cbc_and_thyroidism.html#cholesterolSection'">Start Cholesterol Test</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
